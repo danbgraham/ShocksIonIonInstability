@@ -1,6 +1,6 @@
 # ShocksIonIonInstability
 
-Scripts required to generate Figures and model data for the paper "The Structure and Kinetic Ion Behavior of Low Mach Number Shocks" by D. B. Graham, Yu. V. Khotyaintsev, & A. Lalti. 
+Scripts required to generate Figures and model data for the paper "Ion-Acoustic Waves and the Proton-Alpha Streaming Instability at Collisionless Shocks" by D. B. Graham, Yu. V. Khotyaintsev, & A. Lalti. 
 
 # Abstract
 
