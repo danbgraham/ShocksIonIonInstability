@@ -258,6 +258,11 @@ for ii = 1:Ntimes
     Petemp = Petemp*ne/(dvv*ve)/normfactore/numpts;
     Pptemp = Pptemp*np/(dvv*vp)/normfactorp/numpts;
     Patemp = Patemp*na/(dvv*va)/normfactora/numpts;
+
+    % Above lines should be (this is currently corrected in PICoverviewfig.m): 
+    %Petemp = Petemp*ne/(dve1d*ve)/normfactore/numpts;
+    %Pptemp = Pptemp*np/(dvp1d*vp)/normfactorp/numpts;
+    %Patemp = Patemp*na/(dva1d*va)/normfactora/numpts;
     
     edist1dall(:,ii) = Petemp;
     pdist1dall(:,ii) = Pptemp;
