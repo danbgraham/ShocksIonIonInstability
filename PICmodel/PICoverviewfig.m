@@ -168,7 +168,7 @@ ylabel(h(1),'\omega_{pp} t','fontsize',13)
 cbar = colorbar('peer',h(1));
 title(h(1),'E (V m^{-1})','fontsize',12)
 colormap(h(1),bgrcmap);
-caxis(h(1),max(max(abs(Exaveraged)))*[-1.0 1.0])
+clim(h(1),max(max(abs(Exaveraged)))*[-1.0 1.0])
 axis(h(1),[0 64 0 timesallwpp(end)])
 xticks(h(1),[0 20 40 60 80])
 irf_legend(h(1),'(a)',[0.98 0.995],'fontsize',13,'color','k')
@@ -186,7 +186,7 @@ ylabel(h(2),'\omega_{pp} t','fontsize',13)
 cbar = colorbar('peer',h(2));
 title(h(2),'\phi (V)','fontsize',12)
 colormap(h(2),bgrcmap);
-caxis(h(2),max(max(abs(phiaveraged)))*[-1.0 1.0])
+clim(h(2),max(max(abs(phiaveraged)))*[-1.0 1.0])
 axis(h(2),[0 64 0 timesallwpp(end)])
 xticks(h(2),[0 20 40 60 80])
 irf_legend(h(2),'(b)',[0.98 0.995],'fontsize',13,'color','k')
@@ -223,10 +223,10 @@ hold(h(4),'off')
 xlabel(h(4),' ','fontsize',13)
 ylabel(h(4),'v/v_{e,init}','fontsize',13)
 cbar = colorbar(h(4),'position',[0.782 0.755 0.01 0.11]);
-cbar.Label.String = 'log_{10}f_e (s m^{-4})';
+cbar.Label.String = 'log_{10}\langlef_e\rangle (s m^{-4})';
 colormap(h(4),cmap);
 set(h(4),'xticklabel',[])
-caxis(h(4),[-4.5 0.2]);
+clim(h(4),[-4.5 0.2]);
 irf_legend(h(4),'Electrons',[0.01 0.98],'fontsize',13,'color','k')
 axis(h(4),[0 timesallwpp(end) -4.9 4.9])
 irf_legend(h(4),'(d)',[0.99 0.98],'fontsize',13,'color','k')
@@ -242,10 +242,10 @@ hold(h(5),'off')
 xlabel(h(5),' ','fontsize',13)
 ylabel(h(5),'v/v_{\alpha,init}','fontsize',13)
 cbar = colorbar(h(5),'position',[0.782 0.635 0.01 0.11]);
-cbar.Label.String = 'log_{10}f_\alpha (s m^{-4})';
+cbar.Label.String = 'log_{10}\langlef_\alpha\rangle (s m^{-4})';
 colormap(h(5),cmap);
 set(h(5),'xticklabel',[])
-caxis(h(5),[-3.5 1.5]);
+clim(h(5),[-3.5 1.5]);
 irf_legend(h(5),'Alphas',[0.01 0.08],'fontsize',13,'color','k')
 axis(h(5),[0 timesallwpp(end) -3.9 9.5])
 irf_legend(h(5),'(e)',[0.99 0.98],'fontsize',13,'color','k')
@@ -261,9 +261,9 @@ hold(h(6),'off')
 xlabel(h(6),' ','fontsize',13)
 ylabel(h(6),'v/v_{p,init}','fontsize',13)
 cbar = colorbar(h(6),'position',[0.782 0.515 0.01 0.11]);
-cbar.Label.String = 'log_{10}f_p (s m^{-4})';
+cbar.Label.String = 'log_{10}\langlef_p\rangle (s m^{-4})';
 colormap(h(6),cmap);
-caxis(h(6),[-2.5 2.2]);
+clim(h(6),[-2.5 2.2]);
 irf_legend(h(6),'Protons',[0.01 0.98],'fontsize',13,'color','k')
 xlabel(h(6),'\omega_{pp} t','fontsize',13)
 axis(h(6),[0 timesallwpp(end) -3.9 9.5])
@@ -279,7 +279,7 @@ plot(h(7),vxeinit,edist1Dfinal,'color','r','linewidth',2)
 hold(h(7),'off')
 set(h(7),'yscale','log')
 xlabel(h(7),'v/v_e','fontsize',13)
-ylabel(h(7),'f_e (s m^{-4})','fontsize',13)
+ylabel(h(7),'\langlef_e\rangle (s m^{-4})','fontsize',13)
 axis(h(7),[-2.4 2.4 5e-3 2e0])
 yticks(h(7),[1e-4 1e-3 1e-2 1e-1 1e0])
 irf_legend(h(7),'Initial',[0.4 0.35],'fontsize',13,'color','k')
@@ -294,7 +294,7 @@ plot(h(8),vxainit,adist1Dfinal,'color','r','linewidth',2)
 hold(h(8),'off')
 set(h(8),'yscale','log')
 xlabel(h(8),'v/v_\alpha','fontsize',13)
-ylabel(h(8),'f_\alpha (s m^{-4})','fontsize',13)
+ylabel(h(8),'\langlef_\alpha\rangle (s m^{-4})','fontsize',13)
 axis(h(8),[0 7 5e-2 5e1])
 yticks(h(8),[1e-4 1e-3 1e-2 1e-1 1e0 1e1 1e2])
 xticks(h(8),[0 2 4 6 8 10])
@@ -307,7 +307,7 @@ plot(h(9),vxpinit,pdist1Dfinal,'color','r','linewidth',2)
 hold(h(9),'off')
 set(h(9),'yscale','log')
 xlabel(h(9),'v/v_p','fontsize',13)
-ylabel(h(9),'f_p (s m^{-4})','fontsize',13)
+ylabel(h(9),'\langlef_p\rangle (s m^{-4})','fontsize',13)
 axis(h(9),[-3.5 7.5 5e-2 5e2])
 yticks(h(9),[1e-4 1e-3 1e-2 1e-1 1e0 1e1 1e2])
 irf_legend(h(9),'(i)',[0.98 0.98],'fontsize',13,'color','k')
@@ -318,7 +318,7 @@ shading(h(10),'flat')
 hold(h(10),'on');
 plot(h(10),xvalsall,mean(Exall(distindices(idx1)-60:distindices(idx1)+60,:),1)*10,'b','linewidth',2)
 hold(h(10),'off');
-caxis(h(10),[-2 2.5]);
+clim(h(10),[-2 2.5]);
 ylabel(h(10),'v/v_{\alpha,init}','fontsize',14)
 set(h(10),'xticklabel',[])
 colormap(h(10),cmap)
@@ -334,7 +334,7 @@ plot(h(11),xvalsall,mean(Exall(distindices(idx1)-60:distindices(idx1)+60,:),1)*1
 hold(h(11),'off');
 ylabel(h(11),'v/v_{p,init}','fontsize',14)
 set(h(11),'xticklabel',[])
-caxis(h(11),[-2 2.5]);
+clim(h(11),[-2 2.5]);
 colormap(h(11),cmap)
 irf_legend(h(11),'(k)',[0.99 0.98],'fontsize',13,'color','k')
 axis(h(11),[0 64 -8 8])
@@ -346,7 +346,7 @@ plot(h(12),xvalsall,mean(Exall(distindices(idx2)-60:distindices(idx2)+60,:),1)*1
 hold(h(12),'off');
 ylabel(h(12),'v/v_{\alpha,init}','fontsize',14)
 set(h(12),'xticklabel',[])
-caxis(h(12),[-2 2.5]);
+clim(h(12),[-2 2.5]);
 colormap(h(12),cmap)
 irf_legend(h(12),'(l)',[0.99 0.98],'fontsize',13,'color','k')
 irf_legend(h(12),['\omega_{pp}t = ' num2str(tvalidx2,2)],[0.02 0.14],'fontsize',13,'color',[0 0.7 0])
@@ -359,7 +359,7 @@ plot(h(13),xvalsall,mean(Exall(distindices(idx2)-60:distindices(idx2)+60,:),1)*1
 hold(h(13),'off');
 ylabel(h(13),'v/v_{p,init}','fontsize',14)
 xlabel(h(13),'n/\lambda_D','fontsize',14)
-caxis(h(13),[-2 2.5]);
+clim(h(13),[-2 2.5]);
 colormap(h(13),cmap)
 irf_legend(h(13),'(m)',[0.99 0.98],'fontsize',13,'color','k')
 axis(h(13),[0 64 -8 8])
@@ -372,7 +372,7 @@ hold(h(14),'off');
 ylabel(h(14),' ','fontsize',14)
 set(h(14),'xticklabel',[])
 set(h(14),'yticklabel',[])
-caxis(h(14),[-2 2.5]);
+clim(h(14),[-2 2.5]);
 colormap(h(14),cmap)
 c = colorbar(h(14),'position',[0.935 0.07 0.010 0.36]);
 irf_legend(h(14),'(n)',[0.99 0.98],'fontsize',13,'color','k')
@@ -389,7 +389,7 @@ hold(h(15),'off');
 ylabel(h(15),' ','fontsize',14)
 set(h(15),'xticklabel',[])
 set(h(15),'yticklabel',[])
-caxis(h(15),[-2 2.5]);
+clim(h(15),[-2 2.5]);
 colormap(h(15),cmap)
 irf_legend(h(15),'(o)',[0.99 0.98],'fontsize',13,'color','k')
 axis(h(15),[0 64 -8 8])
@@ -402,7 +402,7 @@ hold(h(16),'off');
 ylabel(h(16),' ','fontsize',14)
 set(h(16),'xticklabel',[])
 set(h(16),'yticklabel',[])
-caxis(h(16),[-2 2.5]);
+clim(h(16),[-2 2.5]);
 colormap(h(16),cmap)
 irf_legend(h(16),'(p)',[0.99 0.98],'fontsize',13,'color','k')
 irf_legend(h(16),['\omega_{pp}t = ' num2str(tvalidx4,3)],[0.02 0.14],'fontsize',13,'color',[0 0.7 0])
@@ -416,7 +416,7 @@ hold(h(17),'off');
 ylabel(h(17),' ','fontsize',14)
 xlabel(h(17),'n/\lambda_D','fontsize',14)
 set(h(17),'yticklabel',[])
-caxis(h(17),[-2 2.5]);
+clim(h(17),[-2 2.5]);
 colormap(h(17),cmap)
 irf_legend(h(17),'(q)',[0.99 0.98],'fontsize',13,'color','k')
 axis(h(17),[0 64 -8 8])
