@@ -149,7 +149,7 @@ for ii = 1:Ntimes
   xa = xa + vxa*dt;
   xp = xp + vxp*dt;
 
-  % Apply boundary conditions
+  % Apply periodic boundary conditions
   xe(xe < 0) = xe(xe < 0)+xlength; xe(xe > xlength) = xe(xe > xlength)-xlength;
   xa(xa < 0) = xa(xa < 0)+xlength; xa(xa > xlength) = xa(xa > xlength)-xlength; 
   xp(xp < 0) = xp(xp < 0)+xlength; xp(xp > xlength) = xp(xp > xlength)-xlength;
