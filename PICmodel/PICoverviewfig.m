@@ -269,7 +269,7 @@ xlabel(h(6),'\omega_{pp} t','fontsize',13)
 axis(h(6),[0 timesallwpp(end) -3.9 9.5])
 irf_legend(h(6),'(f)',[0.99 0.98],'fontsize',13,'color','k')
 
-set(h([4:6]),'Color',0.75*[1 1 1]);
+set(h(4:6),'Color',0.75*[1 1 1]);
 
 % 1D distributions at beginning and end of run
 plot(h(7),vxeinit,edist1Dinit,'color','k','linewidth',2)
@@ -278,7 +278,7 @@ plot(h(7),vxeinit,edist1Dt100,'color',[0 0.5 0],'linewidth',2)
 plot(h(7),vxeinit,edist1Dfinal,'color','r','linewidth',2)
 hold(h(7),'off')
 set(h(7),'yscale','log')
-xlabel(h(7),'v/v_e','fontsize',13)
+xlabel(h(7),'v/v_{e,init}','fontsize',13)
 ylabel(h(7),'\langlef_e\rangle (s m^{-4})','fontsize',13)
 axis(h(7),[-2.4 2.4 5e-3 2e0])
 yticks(h(7),[1e-4 1e-3 1e-2 1e-1 1e0])
@@ -293,7 +293,7 @@ plot(h(8),vxainit,adist1Dt100,'color',[0 0.5 0],'linewidth',2)
 plot(h(8),vxainit,adist1Dfinal,'color','r','linewidth',2)
 hold(h(8),'off')
 set(h(8),'yscale','log')
-xlabel(h(8),'v/v_\alpha','fontsize',13)
+xlabel(h(8),'v/v_{\alpha,init}','fontsize',13)
 ylabel(h(8),'\langlef_\alpha\rangle (s m^{-4})','fontsize',13)
 axis(h(8),[0 7 5e-2 5e1])
 yticks(h(8),[1e-4 1e-3 1e-2 1e-1 1e0 1e1 1e2])
@@ -306,7 +306,7 @@ plot(h(9),vxpinit,pdist1Dt100,'color',[0 0.5 0],'linewidth',2)
 plot(h(9),vxpinit,pdist1Dfinal,'color','r','linewidth',2)
 hold(h(9),'off')
 set(h(9),'yscale','log')
-xlabel(h(9),'v/v_p','fontsize',13)
+xlabel(h(9),'v/v_{p,init}','fontsize',13)
 ylabel(h(9),'\langlef_p\rangle (s m^{-4})','fontsize',13)
 axis(h(9),[-3.5 7.5 5e-2 5e2])
 yticks(h(9),[1e-4 1e-3 1e-2 1e-1 1e0 1e1 1e2])
@@ -421,7 +421,7 @@ colormap(h(17),cmap)
 irf_legend(h(17),'(q)',[0.99 0.98],'fontsize',13,'color','k')
 axis(h(17),[0 64 -8 8])
 
-set(h([10:17]),'Color',0.75*[1 1 1]);
+set(h(10:17),'Color',0.75*[1 1 1]);
 
 set(h(1:17),'fontsize',13);
 set(gcf,'color','w')
